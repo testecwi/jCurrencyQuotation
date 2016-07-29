@@ -51,11 +51,11 @@ public class CurrencyController {
         
 		if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY){
         	calendar.add(Calendar.DATE, -2);
-        } else if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
+        	} else if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
         	calendar.add(Calendar.DATE, -1);
-        }
+        	}
 		quotationData = df.format(calendar.getTime());
-        return quotationData;
+		 return quotationData;
 	}
 
 
