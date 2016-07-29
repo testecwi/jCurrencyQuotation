@@ -48,13 +48,12 @@ public class CurrencyController {
 		
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(datequotation);
-		
-        if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY){
+        
+		if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY){
         	calendar.add(Calendar.DATE, -2);
         } else if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
            calendar.add(Calendar.DATE, -1);
 		}
-        
         quotationData = df.format(calendar.getTime());
         return quotationData;
 	}
